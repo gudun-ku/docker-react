@@ -12,6 +12,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "bell-react-app"
+  version: 3
   env: "BellReactApp-env"
   bucket_name: "elasticbeanstalk-us-east-2-680841658568"
   bucket_path: "bell-react-app"
