@@ -1,6 +1,6 @@
 # Builder step
 ## Specify a base image as builder step
-FROM node:14-alpine as builder
+FROM node:14-alpine
 ## Specify the working directory
 WORKDIR /app
 ## Copy needed files 
