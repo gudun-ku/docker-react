@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run -e CI=true gudunku/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "gudunku-docker-react"
+  env: "GudunkuDockerReact-env"
+  bucket_name: "elasticbeanstalk-us-east-2-680841658568"
+  bucket_path: "gudunku-docker-react"
+  on:
+    branch: master
+
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key: $AWS_SECRET_KEY
