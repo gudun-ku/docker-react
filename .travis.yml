@@ -11,10 +11,10 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
-  app: "gudunku-docker-react"
-  env: "GudunkuDockerReact-env"
+  app: "bell-react-app"
+  env: "BellReactApp-env"
   bucket_name: "elasticbeanstalk-us-east-2-680841658568"
-  bucket_path: "gudunku-docker-react"
+  bucket_path: "bell-react-app"
   on:
     branch: master
 
