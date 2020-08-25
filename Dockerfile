@@ -4,7 +4,7 @@ FROM node:14-alpine as builder
 ## Specify the working directory
 WORKDIR /app
 ## Copy needed files 
-COPY package.json  .
+COPY package*.json  ./
 ## Install dependencies
 RUN npm install
 ## Copy app files
@@ -17,5 +17,5 @@ RUN npm run build
 ## second phase
 FROM nginx
 EXPOSE 80
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=0 /app/build /usr/share/nginx/html
 # NO Default command
