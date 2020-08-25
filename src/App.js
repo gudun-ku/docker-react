@@ -9,6 +9,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hi there!</p>
         <p>A new react app is coming!</p>
+        <p>I was changed on feature branch</p>
         <a
           className="App-link"
           href="https://reactjs.org"
